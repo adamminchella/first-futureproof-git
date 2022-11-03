@@ -132,6 +132,15 @@ footer {
   display: none;
 }
 
+.bar {
+  width: 40px;
+  height: 3px;
+  background-color: aliceblue;
+  margin: 9px 0;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
 @media screen and (max-width: 768px) {
   .card {
     height: fit-content;
@@ -169,5 +178,25 @@ footer {
   .hamburger {
     display: initial;
     cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .hamburger.active {
+    transform: translateX(10px);
+    transition: 0.3s;
+  }
+
+  .hamburger.active .bar:first-child {
+    transform: rotate(45deg) translateY(17px);
+    transition: 0.3s;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:last-child {
+    transform: rotate(-45deg) translateY(-17px);
+    transition: 0.3s;
   }
 }
