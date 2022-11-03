@@ -62,7 +62,8 @@ h1 {
 /* Create card for plant info */
 
 .card {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin: 40px auto;
   width: 80%;
   height: 400px;
@@ -83,7 +84,7 @@ h1 {
 }
 
 .card-img {
-  width: 50%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -125,4 +126,19 @@ footer {
   height: 100px;
   text-align: center;
   color: aliceblue;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    height: fit-content;
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    padding-bottom: 10px;
+  }
+
+  .description {
+    font-size: 1.5rem;
+  }
 }
