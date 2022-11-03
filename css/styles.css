@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Niconne&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -91,6 +95,7 @@ h1 {
 
 .info-container {
   margin: 0 20px;
+  position: relative;
 }
 
 .info {
@@ -214,18 +219,19 @@ footer {
 
   .nav-links {
     position: absolute;
-    left: -120%;
-    top: 90px;
+    left: 0;
+    top: -150%;
     background-color: rgb(61, 121, 61);
     padding: 20px;
     flex-direction: column;
     width: 100%;
-    transition: left 0.4s;
+    transition: top 0.6s;
+    z-index: -1;
   }
 
   .nav-links.active {
-    left: 0;
-    transition: left 0.4s;
+    top: 90px;
+    transition: top 0.4s ease-in-out;
   }
 
   .hamburger {
@@ -241,7 +247,7 @@ footer {
 
   .hamburger.active .bar:first-child {
     transform: rotate(45deg) translateY(17px);
-    transition: 0.3s;
+    transition: all 0.3s;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -250,6 +256,6 @@ footer {
 
   .hamburger.active .bar:last-child {
     transform: rotate(-45deg) translateY(-17px);
-    transition: 0.3s;
+    transition: all 0.3s;
   }
 }

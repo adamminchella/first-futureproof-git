@@ -11,8 +11,8 @@
     <header>
       <nav>
         <img class="icon" src="../images/plant-pot.png" alt="" />
-        <h1>Houseplants</h1>
-        <ul>
+        <h1>Succulents</h1>
+        <ul class="nav-links">
           <a href="../index.html">
             <li>Home</li>
           </a>
@@ -23,14 +23,19 @@
             <li>Succulents</li>
           </a>
         </ul>
+        <div class="hamburger hidden">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
       </nav>
     </header>
     <main>
       <p class="description">
-        Below is a selection of common houseplants with some information and
-        care requirements. For information about cacti and succulents please use
-        the links at the top of the page! Generally, houseplants that are not
-        cacti or succulents can tolerate more water and less sun.
+        Unlike cacti, which store water in their stems, succulents generally
+        have large, fleshy leaves that retain water during periods of drought.
+        When kept as houseplants, succulents should be planted in pots with
+        drainage holes to avoid the risk of root rot.
       </p>
       <div class="card">
         <img class="card-img" src="../images/jadeplant.jpeg" alt="" />
@@ -64,28 +69,48 @@
       </div>
       <div class="card">
         <div class="info-container">
-          <h2>Swiss cheese plant</h2>
+          <h2>String of pearls</h2>
           <div class="info">
             <h3>Latin name</h3>
-            <p>Monstera deliciosa</p>
+            <p>Senecio rowleyanus</p>
             <h3>Water requirements</h3>
-            <p>Keep soil moist. Water when top two inches of soil is dry</p>
+            <p>
+              Water when the soil is dry and the "eyes" on each pearl start to
+              shrivel up
+            </p>
             <h3>Light requirements</h3>
-            <p>Bright indirect light</p>
+            <p>Full sun or bright indirect light</p>
             <h3>Propagation</h3>
             <p>Stem cuttings, best chance of success in Spring/Summer</p>
             <h3>Soil</h3>
-            <p>Plant will do best in a well draining soil</p>
+            <p>Plant will do best in a gritty, well draining soil</p>
             <h3>Repotting</h3>
             <p>Repot when rootbound, around every 2-3 years</p>
             <h3>Fertilization</h3>
-            <p>Fertilize once a month in the growing season</p>
+            <p>Fertilize once in spring</p>
           </div>
         </div>
-        <img class="card-img" src="../images/monstera.jpeg" alt="" />
+        <img class="card-img" src="../images/string-of-pearls.jpeg" alt="" />
         <img class="icon card-icon" src="../images/plant-pot.png" alt="" />
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <p>Sign up here for more interesting plant facts!</p>
+      <div class="form-container">
+        <form class="signup-form">
+          <label for="email"></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter email..."
+          />
+          <button type="button">
+            <img src="../images/icons8-envelope-96.png" alt="" />
+          </button>
+        </form>
+      </div>
+    </footer>
+    <script src="../main.js"></script>
   </body>
 </html>
