@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Niconne&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -26,7 +30,7 @@ nav {
   background-color: rgb(61, 121, 61);
 }
 
-nav > ul {
+.nav-links {
   display: flex;
   align-items: center;
   list-style: none;
@@ -62,7 +66,8 @@ h1 {
 /* Create card for plant info */
 
 .card {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin: 40px auto;
   width: 80%;
   height: 400px;
@@ -83,13 +88,14 @@ h1 {
 }
 
 .card-img {
-  width: 50%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .info-container {
   margin: 0 20px;
+  position: relative;
 }
 
 .info {
@@ -119,10 +125,137 @@ h1 {
   margin: 15px 8px;
 }
 
+.hidden {
+  display: none;
+}
+
+.bar {
+  width: 40px;
+  height: 3px;
+  background-color: aliceblue;
+  margin: 9px 0;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
 footer {
   background-color: rgb(61, 121, 61);
   width: 100%;
-  height: 100px;
+  /* height: 100px; */
   text-align: center;
   color: aliceblue;
+  padding: 20px 0 40px;
+}
+
+.form-container {
+  margin: auto;
+  align-items: center;
+  width: 60%;
+  /* height: 4rem; */
+  /* border: none; */
+  /* border-radius: 20px; */
+}
+
+.signup-form {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.signup-form input {
+  height: 100%;
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 24px;
+  font-size: 1.6rem;
+}
+
+.signup-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3px;
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  width: 44px;
+  border-radius: 50px;
+  background-color: rgba(61, 121, 61, 0.6);
+  transition: width 0.3s;
+}
+
+.signup-form button img {
+  width: 20px;
+}
+
+.signup-form button:hover {
+  width: 100px;
+  transition: width 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    height: fit-content;
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    padding-bottom: 10px;
+  }
+
+  .description {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .nav-links {
+    position: absolute;
+    left: 0;
+    top: -150%;
+    background-color: rgb(61, 121, 61);
+    padding: 20px;
+    flex-direction: column;
+    width: 100%;
+    transition: top 0.6s;
+    z-index: -1;
+  }
+
+  .nav-links.active {
+    top: 90px;
+    transition: top 0.4s ease-in-out;
+  }
+
+  .hamburger {
+    display: initial;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .hamburger.active {
+    transform: translateX(10px);
+    transition: 0.3s;
+  }
+
+  .hamburger.active .bar:first-child {
+    transform: rotate(45deg) translateY(17px);
+    transition: all 0.3s;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:last-child {
+    transform: rotate(-45deg) translateY(-17px);
+    transition: all 0.3s;
+  }
 }

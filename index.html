@@ -12,7 +12,7 @@
       <nav>
         <img class="icon" src="./images/plant-pot.png" alt="" />
         <h1>Houseplants</h1>
-        <ul>
+        <ul class="nav-links">
           <a href="./index.html">
             <li>Home</li>
           </a>
@@ -23,6 +23,11 @@
             <li>Succulents</li>
           </a>
         </ul>
+        <div class="hamburger hidden">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
       </nav>
     </header>
     <main>
@@ -79,6 +84,23 @@
         <img class="icon card-icon" src="./images/plant-pot.png" alt="" />
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <p>Sign up here for more interesting plant facts!</p>
+      <div class="form-container">
+        <form class="signup-form">
+          <label for="email"></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter email..."
+          />
+          <button type="button">
+            <img src="./images/icons8-envelope-96.png" alt="" />
+          </button>
+        </form>
+      </div>
+    </footer>
+    <script src="./main.js"></script>
   </body>
 </html>
