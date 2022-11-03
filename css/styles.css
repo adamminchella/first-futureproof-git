@@ -26,7 +26,7 @@ nav {
   background-color: rgb(61, 121, 61);
 }
 
-nav > ul {
+.nav-links {
   display: flex;
   align-items: center;
   list-style: none;
@@ -128,6 +128,10 @@ footer {
   color: aliceblue;
 }
 
+.hidden {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .card {
     height: fit-content;
@@ -140,5 +144,30 @@ footer {
 
   .description {
     font-size: 1.5rem;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .nav-links {
+    position: absolute;
+    left: -120%;
+    top: 90px;
+    background-color: rgb(61, 121, 61);
+    padding: 20px;
+    flex-direction: column;
+    width: 100%;
+    transition: left 0.4s;
+  }
+
+  .nav-links.active {
+    left: 0;
+    transition: left 0.4s;
+  }
+
+  .hamburger {
+    display: initial;
+    cursor: pointer;
   }
 }
